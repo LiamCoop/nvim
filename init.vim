@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 " Functional Plugins
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'rust-lang/rust.vim'
 
 " Visual Plugins
 Plug 'vim-airline/vim-airline'
@@ -58,6 +59,11 @@ inoremap jk <Esc>
 "inoremap ' ''<ESC>ha
 "inoremap ` ``<ESC>ha
 "inoremap < <><ESC>ha
+
+nnoremap <Leader>+ :vertical resize +5<CR>
+nnoremap <Leader>- :vertical resize -5<CR>
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 
 " Abbreviations
