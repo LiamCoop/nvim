@@ -6,19 +6,23 @@ call plug#begin('~/.vim/plugged')
 " Functional Plugins
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " Visual Plugins
 Plug 'vim-airline/vim-airline'
 Plug 'gruvbox-community/gruvbox'
 
+" Telescope Plugins
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+
+
 call plug#end()
 
 
 filetype on
+filetype plugin indent on
 syntax on
 set relativenumber
 set cursorline
@@ -42,7 +46,9 @@ set termguicolors
 set scrolloff=8
  
 set cmdheight=2
-filetype plugin indent on
+
+let mapleader = " "
+
 " remaps
 inoremap jk <Esc>
 "inoremap ( ()<ESC>ha
@@ -53,17 +59,6 @@ inoremap jk <Esc>
 "inoremap ` ``<ESC>ha
 "inoremap < <><ESC>ha
 
-" Find files using telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-" Using lua functions
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " Abbreviations
 iabbrev af (<Right> => {<Right>
