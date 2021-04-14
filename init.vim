@@ -47,7 +47,6 @@ set termguicolors
 set scrolloff=8
 set cmdheight=2
 
-
 " remaps
 inoremap jk <Esc>
 nnoremap <Leader>+ :vertical resize +5<CR>
